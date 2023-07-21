@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Sophie Bluel - Architecte d'intérieur</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+          rel="stylesheet">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="https://kit.fontawesome.com/c45c43b1fd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <section class="head">
+        <div class="change">
+            <span class="edit"><i class="fa-regular fa-pen-to-square"></i>Mode édition</span>
+            <button class="publier">
+                publier les changements
+            </button>
+        </div>
+
+    </section>
+
+    <section class="sophie">
+        <h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
+        <nav>
+            <ul>
+                <li>projets</li>
+                <li>contact</li>
+                <li><a class="login" href="login.html">login</a></li>
+                <li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+            </ul>
+        </nav>
+    </section>
+
+</header>
+
+
+=
+<main>
+    <section id="introduction">
+        <figure>
+            <img src="./assets/images/sophie-bluel.png" alt="">
+        </figure>
+        <article>
+            <h2>Designer d'espace</h2>
+            <p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison
+                finale du chantier.</p>
+            <p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les
+                couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier
+                sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+            <p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG,
+                décorateur(trice)</p>
+        </article>
+    </section>
+    <section id="portfolio">
+        <div class="projets">
+            <h2>Mes Projets</h2>
+            <a class="modifier" id="btnmodal"><i class="fa-regular fa-pen-to-square"></i>Mofifier</a>
+        </div>
+        <div class="bouttons">
+            <button class="all selected">Tous</button>
+        </div>
+        <div class="gallery">
+
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Vous avez un projet ? Discutons-en !</p>
+        <form action="#" method="post">
+            <label for="name">Nom</label>
+            <input type="text" name="name" id="name">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <label for="message">message</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <input type="submit" value="Envoyer">
+        </form>
+    </section>
+</main>
+
+<footer>
+    <nav>
+        <ul>
+            <li>Mentions Légales</li>
+        </ul>
+    </nav>
+</footer>
+<div class="modalback2">
+    <div class="modaluser" id="modaleuser">
+        <div class="close">x</div>
+        <h2>Galerie photo</h2>
+        <div class="modal_gallery"></div>
+        <div class="buttonedit">
+            <hr class="hr"/>
+            <button class="add" id="btnadd">Ajouter une photo</button>
+            <button class="delete">supprimer la catégorie</button>
+        </div>
+    </div>
+</div>
+<div class="modaladd">
+    <div class="modalback">
+		<div class="close" id="close">x</div>
+		<i class="fa-solid fa-arrow-left"></i>
+        
+        <div class="inputadd">
+			<h2>Ajout photo</h2>
+			<div class="addphoto">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M448 80c8.8 0 16 7.2 16 16V415.8l-5-6.5-136-176c-4.5-5.9-11.6-9.3-19-9.3s-14.4 3.4-19 9.3L202 340.7l-30.5-42.7C167 291.7 159.8 288 152 288s-15 3.7-19.5 10.1l-80 112L48 416.3l0-.3V96c0-8.8 7.2-16 16-16H448zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z" /></svg>
+            	<label class="ajoutphoto">+ Ajout photo<input class="file_upload" id="image" name="file_upload" type="file" accept=".jpg, .png"></label>
+				<span>jpg, png : 4mo max</span>
+				
+			</div>
+			
+            <label for="title">Titre</label>
+            <input class="inputitle"id="title"/>
+            <div class="labelcate">
+                <label for="categories">Catégorie</label>
+                <select class="categories" name="categories" id="categories">
+                    <option value=""></option>
+                    <option id="object" value="1">Objets</option>
+                    <option id="Apartement" value="2">Appartements</option>
+                    <option id="hotel+restaurant" value="3">hôtels & restaurants</option>
+                </select>
+            </div>
+			<hr class="hr"/>
+            <button class="valider">valider</button>
+        </div>
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
